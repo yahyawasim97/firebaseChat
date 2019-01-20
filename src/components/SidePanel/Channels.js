@@ -18,7 +18,8 @@ class Channels extends Component {
         user: this.props.currentUser,
         firstLoad:true,
         notifications:[],
-        activeChannel:''
+        activeChannel:'',
+        typingRef:firebase.database().ref('typing')
     }
     componentDidMount(){
         this.addListeners();
@@ -158,6 +159,10 @@ class Channels extends Component {
         this.props.setChannel(channel);
         this.props.setPrivateChannel(false);
         this.setState({channel});
+        this.state.typingRef
+            .child(this.state.channel.id)
+            .child(this.state.user.uid)
+            .remove()
     }
     clearNotifications=()=>{
         let index = this.state.notifications.findIndex(notification =>notification.id===this.state.channel.id);
