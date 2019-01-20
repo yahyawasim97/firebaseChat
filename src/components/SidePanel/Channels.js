@@ -4,6 +4,7 @@ import firebase from '../../firebase'
 import {connect} from 'react-redux';
 import {setChannel,setPrivateChannel}from '../../actions';
 
+
 class Channels extends Component {
     
     state={
@@ -175,30 +176,30 @@ class Channels extends Component {
         return(
             <React.Fragment>
             <Menu.Menu className="menu">
-                <Menu.Item>
+                <Menu.Item style={{color:"white"}}>
                     <span>
-                        <Icon name="exchange" /> Channels
+                        <Icon  inverted name="group" /> Groups
                     </span>{" "}
                     ({channels.length}) <Icon name="add" onClick={this.openModal}/>
                 </Menu.Item>
                 {this.displayChannels(channels)}
             </Menu.Menu>
             <Modal basic open={modal} onClose={this.closeModal}>
-                <Modal.Header>Add a Channel</Modal.Header>
+                <Modal.Header>Add a Group</Modal.Header>
                 <Modal.Content>
                     <Form onSubmit={this.handleSubmit}>
                         <Form.Field>
                             <Input
                                 fluid
                                 name="channelName"
-                                label="Name of Channel"
+                                label="Name of Group"
                                 onChange={this.handleChange}
                             />
                         </Form.Field>
                         <Form.Field>
                             <Input
                                 fluid
-                                label="About the Channel"
+                                label="About the Group"
                                 name="channelDetails"
                                 onChange={this.handleChange}
                             />

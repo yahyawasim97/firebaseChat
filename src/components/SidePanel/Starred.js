@@ -71,9 +71,9 @@ class Starred extends Component{
         const {starredChannels} = this.state;
         return( 
         <Menu.Menu className="menu">
-            <Menu.Item>
-                <span>
-                    <Icon name="star"/> Starred
+            <Menu.Item  style={{color:"white"}}>
+                <span >
+                    <Icon inverted name="star"/> Starred
                 </span>{" "}
                 ({starredChannels.length}) 
             </Menu.Item>

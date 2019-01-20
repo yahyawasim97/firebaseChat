@@ -91,9 +91,9 @@ class DirectMessages extends Component{
         const {users,activeChannel} =this.state;
         return(
             <Menu.Menu className="menu">
-                <Menu.Item>
-                    <span>
-                        <Icon name="mail"/> DirectMessages
+                <Menu.Item style={{color:"white"}}>
+                    <span >
+                        <Icon inverted name="mail"/> DirectMessages
                     </span>{' '}
                     ({users.length})
                 </Menu.Item>

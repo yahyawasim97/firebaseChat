@@ -16,7 +16,8 @@ class MessagesForm extends Component{
         uploadState:'',
         uploadTask:null,
         storageRef:firebase.storage().ref(),
-        percentUpload:0
+        percentUpload:0,
+        typingRef:firebase.database().ref('typing')
     }
 
 
@@ -127,6 +128,9 @@ class MessagesForm extends Component{
         })
     }
 
+    handleKeyDown=()=>{
+        
+    }
     render(){
         const{errors,message,loading,modal,uploadState,percentUpload} = this.state;
         return(
@@ -140,6 +144,7 @@ class MessagesForm extends Component{
                 labelPosition="left"
                 placeholder="Write Your Message"
                 value={message}
+                onKeyDown={this.handleKeyDown}
                 className={
                     errors.some(error=> error.message.includes('message'))?'error':''
                 }

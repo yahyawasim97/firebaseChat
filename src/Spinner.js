@@ -1,9 +1,11 @@
 import React from 'react';
-import {Loader, Dimmer} from 'semantic-ui-react';
+import {Loader, Dimmer,Image,} from 'semantic-ui-react';
+import loader from './assets/loader.gif'
 
 const Spinner=()=>(
     <Dimmer active>
-        <Loader size="huge" content={"Preparing Chat......"}/>
+        <Image style={{ filter: 'invert(100%)'}} src={loader}/>
+        <h2>Preparing Chat...</h2>
     </Dimmer>
 )
 export default Spinner;

@@ -52,7 +52,7 @@ class MetaPanel extends Component{
                     >
                     <Icon name="dropdown"/>
                     <Icon name="info"/>
-                    Channel Details
+                    Group Details
                     </Accordion.Title>
                     <Accordion.Content
                         active={activeIndex===0}
