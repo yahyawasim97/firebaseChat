@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Firebase Chat
+This project is based on react and firebase to create a clone of slack. 
+
+## Getting Started
+
+To get started developing right away:
 
 ## Available Scripts
 
